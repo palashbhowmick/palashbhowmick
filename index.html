@@ -4,14 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MDM Architect & Creative Innovator</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Performance: preconnect to fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    <!-- Basic SEO / Social -->
+    <meta name="description" content="Palash Bhowmick — MDM Architect & Creative Innovator. Enterprise data lineage, AI engineering, frontend leadership and creative work.">
+    <meta property="og:title" content="Palash Bhowmick — MDM Architect & Creative Innovator">
+    <meta property="og:description" content="Bridging enterprise data lineage with AI architecture. Frontend leadership and creative pursuits.">
+    <meta property="og:type" content="website">
+    <!-- TODO: set a real og:image -->
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://your-domain.example/">
+
+    <!-- Favicon: SVG primary + .ico fallback -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="/favicon.ico">
+    <!-- Safari pinned tab (uses monochrome mask) -->
+    <link rel="mask-icon" href="/favicon.svg" color="#38bdf8">
+    <!-- iOS / Android -->
+    <link rel="apple-touch-icon" href="/favicon.svg">
+    <meta name="theme-color" content="#0f172a">
+
+    <!-- Tailwind config must be defined before loading the CDN script -->
     <script>
+        tailwind = window.tailwind || {};
         tailwind.config = {
             theme: {
                 extend: {
@@ -43,6 +60,14 @@
             }
         }
     </script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
         body {
@@ -109,14 +134,17 @@
 </head>
 <body class="antialiased">
 
+    <!-- Accessibility: skip link -->
+    <a class="sr-only focus:not-sr-only absolute left-4 top-4 bg-slate-900 text-white px-3 py-2 rounded" href="#main">Skip to content</a>
+
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 glass-panel border-b border-slate-800/50">
+    <nav role="navigation" aria-label="Main navigation" class="fixed w-full z-50 glass-panel border-b border-slate-800/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex-shrink-0 flex items-center gap-2">
                     <div class="w-3 h-3 bg-cyan-400 rounded-full animate-pulse"></div>
                     <!-- 1. PUT YOUR NAME OR BRAND HERE -->
-                    <span class="font-bold text-xl tracking-tighter text-white">PALASH<span class="text-cyan-400">BHOWMICK</span></span>
+                    <span class="font-bold text-xl tracking-tighter text-white">PALASH<span class="text-cyan-400"> BHOWMICK</span></span>
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
@@ -131,350 +159,362 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 hero-bg overflow-hidden">
-        <!-- Background Grid -->
-        <div class="absolute inset-0" style="background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px); background-size: 50px 50px;"></div>
-        
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="lg:grid lg:grid-cols-12 lg:gap-8">
-                <div class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
-                    <div class="inline-flex items-center px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 text-xs font-semibold uppercase tracking-wide mb-4">
-                        <span class="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
-                        MDM Expert & AI Engineer
-                    </div>
-                    <h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl lg:text-6xl">
-                        <!-- 2. ADD YOUR INTRO LINE HERE -->
-                        <span class="block text-lg md:text-xl font-medium text-cyan-400 mb-2">Hi, I'm Palash Bhowmick</span>
-                        <span class="block">Data Architect.</span>
-                        <span class="block gradient-text">Creative Soul.</span>
-                    </h1>
-                    <p class="mt-3 text-base text-slate-400 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                        I bridge the gap between massive enterprise data lineage and modern AI architecture. Bringing artistic intuition to frontend leadership and mathematical precision to backend logic.
-                    </p>
-                    <div class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0 flex gap-4">
-                        <a href="#projects" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-cyan-600 hover:bg-cyan-700 transition-all shadow-lg shadow-cyan-500/20">
-                            View Portfolio
-                        </a>
-                        <a href="#creative" class="inline-flex items-center justify-center px-6 py-3 border border-slate-700 bg-slate-800/50 text-base font-medium rounded-md text-slate-300 hover:bg-slate-800 transition-all">
-                            My Hobbies
-                        </a>
-                    </div>
-                </div>
-                <div class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center justify-center">
-                   <div class="relative w-full rounded-lg lg:max-w-md group">
-                        <!-- Decorative Elements -->
-                        <div class="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
-                        
-                        <!-- Terminal Window -->
-                        <div class="relative bg-[#0B1120] rounded-xl p-1 border border-slate-700 shadow-2xl">
-                            <div class="bg-slate-800/50 px-4 py-2 rounded-t-lg flex items-center gap-2 border-b border-slate-700">
-                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                                <!-- 3. UPDATE THE TERMINAL PROMPT HERE -->
-                                <div class="ml-2 text-xs text-slate-400 font-mono">palash@mainframe:~</div>
-                            </div>
-                            <div class="p-6 font-mono text-sm text-slate-300 leading-relaxed">
-                                <span class="text-purple-400">import</span> mcp_server <span class="text-purple-400">as</span> ai<br>
-                                <span class="text-purple-400">from</span> creative <span class="text-purple-400">import</span> Art, Music<br><br>
-                                <span class="text-slate-500"># Initialize Professional Stack</span><br>
-                                class <span class="text-yellow-300">Profile</span>:<br>
-                                &nbsp;&nbsp;experience = <span class="text-green-400">"Decades"</span><br>
-                                &nbsp;&nbsp;specialty = [<span class="text-green-400">"MDM"</span>, <span class="text-green-400">"Lineage"</span>, <span class="text-green-400">"VueJS"</span>]<br><br>
-                                &nbsp;&nbsp;<span class="text-blue-400">def</span> <span class="text-yellow-300">innovate</span>(self):<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;return ai.scale(dataset=<span class="text-cyan-400">"Huge"</span>)<br><br>
-                                <span class="text-slate-500"># Running...</span><br>
-                                > Deploying AI Agents... <span class="text-green-400">OK</span><br>
-                                > Tuning Synthesizers... <span class="text-green-400">OK</span><br>
-                                <span class="cursor">&nbsp;</span>
-                            </div>
-                        </div>
-                   </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience / MDM Domain Section -->
-    <section id="experience" class="py-20 bg-slate-900 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16">
-                <h2 class="text-base text-cyan-400 font-semibold tracking-wide uppercase">Core Expertise</h2>
-                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
-                    Mastering Enterprise Data
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 gap-8 sm:grid-cols-3">
-                <!-- Card 1 -->
-                <div class="glass-panel p-8 rounded-xl tech-card transition-all duration-300 group">
-                    <div class="w-14 h-14 bg-slate-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-cyan-900/30 transition-colors">
-                        <i class="fas fa-sitemap text-cyan-400 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Data Lineage</h3>
-                    <p class="text-slate-400 leading-relaxed">Architecting end-to-end visibility. I build systems that trace data from source to consumption, ensuring compliance and trust in massive enterprise ecosystems.</p>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="glass-panel p-8 rounded-xl tech-card transition-all duration-300 group">
-                    <div class="w-14 h-14 bg-slate-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-purple-900/30 transition-colors">
-                        <i class="fas fa-shopping-bag text-purple-400 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Data Marketplace</h3>
-                    <p class="text-slate-400 leading-relaxed">Democratizing data. I transform raw tables into governed, shoppable assets, enabling business users to leverage data without technical barriers.</p>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="glass-panel p-8 rounded-xl tech-card transition-all duration-300 group">
-                    <div class="w-14 h-14 bg-slate-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-pink-900/30 transition-colors">
-                        <i class="fas fa-fingerprint text-pink-400 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Deduplication</h3>
-                    <p class="text-slate-400 leading-relaxed">The hunt for the "Golden Record." Implementing complex entity resolution algorithms to clean and unify millions of records with precision.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tech Stack Section -->
-    <section id="tech" class="py-20 relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-start">
-                <div class="mb-10 lg:mb-0">
-                    <h2 class="text-3xl font-extrabold text-white sm:text-4xl mb-6">
-                        Technology Stack
-                    </h2>
-                    <p class="text-lg text-slate-300 mb-8">
-                        I don't just manage data; I build the systems that power it. My career is defined by a hunger for new tech—migrating legacy frontends to Vue.js and deploying next-gen AI servers.
-                    </p>
-                    
-                    <div class="space-y-8">
-                        <!-- Frontend -->
-                        <div class="relative pl-6 border-l-2 border-cyan-500/30">
-                            <h4 class="text-sm font-bold text-cyan-400 uppercase tracking-wider mb-2">Frontend Leadership</h4>
-                            <p class="text-slate-400 text-sm mb-3">Led the UI revamp of MDM products.</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 text-xs rounded bg-slate-800 border border-slate-700 text-white font-mono">Vue.js</span>
-                                <span class="px-3 py-1 text-xs rounded bg-slate-800 border border-slate-700 text-white font-mono">JavaScript ES6+</span>
-                                <span class="px-3 py-1 text-xs rounded bg-slate-800 border border-slate-700 text-white font-mono">Tailwind</span>
-                            </div>
-                        </div>
-
-                        <!-- AI -->
-                        <div class="relative pl-6 border-l-2 border-purple-500/30">
-                            <h4 class="text-sm font-bold text-purple-400 uppercase tracking-wider mb-2">AI & Backend</h4>
-                            <p class="text-slate-400 text-sm mb-3">Pushing boundaries with Large Scale AI.</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 text-xs rounded bg-slate-800 border border-slate-700 text-white font-mono">Python</span>
-                                <span class="px-3 py-1 text-xs rounded bg-slate-800 border border-slate-700 text-white font-mono">MCP Servers</span>
-                                <span class="px-3 py-1 text-xs rounded bg-slate-800 border border-slate-700 text-white font-mono">Machine Learning</span>
-                            </div>
-                        </div>
-
-                        <!-- DevOps -->
-                        <div class="relative pl-6 border-l-2 border-green-500/30">
-                            <h4 class="text-sm font-bold text-green-400 uppercase tracking-wider mb-2">DevOps & CI/CD</h4>
-                            <p class="text-slate-400 text-sm mb-3">Ensuring robust, automated delivery.</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 text-xs rounded bg-slate-800 border border-slate-700 text-white font-mono">Docker</span>
-                                <span class="px-3 py-1 text-xs rounded bg-slate-800 border border-slate-700 text-white font-mono">Jenkins</span>
-                                <span class="px-3 py-1 text-xs rounded bg-slate-800 border border-slate-700 text-white font-mono">Cloud Native</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Interactive looking abstract tech element -->
-                <div class="relative lg:h-full flex items-center justify-center">
-                     <div class="w-full aspect-square max-w-sm bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl border border-slate-700 p-6 relative overflow-hidden">
-                        <!-- Abstract UI representation -->
-                        <div class="flex justify-between items-center mb-6 border-b border-slate-700 pb-4">
-                            <div class="h-3 w-24 bg-slate-600 rounded"></div>
-                            <div class="flex gap-2">
-                                <div class="h-3 w-3 bg-cyan-500 rounded-full"></div>
-                                <div class="h-3 w-3 bg-purple-500 rounded-full"></div>
-                            </div>
-                        </div>
-                        <div class="space-y-3">
-                            <div class="h-20 bg-slate-700/50 rounded-lg w-full animate-pulse"></div>
-                            <div class="h-8 bg-slate-700/30 rounded-lg w-3/4"></div>
-                            <div class="h-8 bg-slate-700/30 rounded-lg w-1/2"></div>
-                        </div>
-                        
-                        <!-- Floating code badges -->
-                        <div class="absolute bottom-6 right-6 text-right">
-                            <div class="text-xs text-slate-500 mb-1">System Status</div>
-                            <div class="text-xl font-bold text-green-400">Operational</div>
-                        </div>
-                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Projects Section -->
-    <section id="projects" class="py-20 bg-slate-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-end justify-between mb-12">
-                <div>
-                    <h2 class="text-3xl font-extrabold text-white">Featured Initiatives</h2>
-                    <p class="mt-2 text-slate-400">Where experience meets execution.</p>
-                </div>
-            </div>
-
-            <div class="grid gap-8 md:grid-cols-2">
-                <!-- Project 1 -->
-                <div class="relative group overflow-hidden rounded-xl border border-slate-700 bg-slate-800 hover:border-green-500/50 transition-colors">
-                    <div class="p-8">
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-xl font-bold text-white group-hover:text-green-400 transition-colors">Frontend Revamp & Leadership</h3>
-                            <span class="bg-green-500/10 text-green-400 text-xs font-mono px-2 py-1 rounded">VUE.JS</span>
-                        </div>
-                        <p class="text-slate-400 mb-6 text-sm">
-                            Led a dedicated UI team to modernize an enterprise MDM interface. Migrated legacy frameworks to a modular Vue.js architecture, establishing a new design system that improved user efficiency by 40%.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="relative group overflow-hidden rounded-xl border border-slate-700 bg-slate-800 hover:border-purple-500/50 transition-colors">
-                    <div class="p-8">
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">Enterprise AI & MCP Integration</h3>
-                            <span class="bg-purple-500/10 text-purple-400 text-xs font-mono px-2 py-1 rounded">PYTHON / AI</span>
-                        </div>
-                        <p class="text-slate-400 mb-6 text-sm">
-                            Implementing MCP (Model Context Protocol) servers to securely bridge LLMs with internal enterprise data. Built Python pipelines to handle large-scale datasets for RAG (Retrieval-Augmented Generation).
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Creative Pursuits Section (NEW) -->
-    <section id="creative" class="py-24 relative overflow-hidden bg-[#0B1120]">
-        <!-- Background Blobs -->
-        <div class="blob-bg bg-purple-600 w-96 h-96 rounded-full top-0 left-0 -translate-x-1/2 -translate-y-1/2 mix-blend-screen animate-blob"></div>
-        <div class="blob-bg bg-pink-600 w-96 h-96 rounded-full bottom-0 right-0 translate-x-1/2 translate-y-1/2 mix-blend-screen animate-blob animation-delay-2000"></div>
-        <div class="blob-bg bg-green-600 w-80 h-80 rounded-full bottom-0 left-0 -translate-x-1/2 translate-y-1/2 mix-blend-screen animate-blob animation-delay-4000"></div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16">
-                <h2 class="text-sm font-bold text-pink-400 uppercase tracking-wider">Beyond the Code</h2>
-                <h3 class="mt-2 text-3xl font-extrabold text-white sm:text-4xl">
-                    <span class="gradient-text-creative">Life & Inspiration</span>
-                </h3>
-                <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-400">
-                    I believe that building great software requires a balanced mind. My hobbies—from art to gardening—fuel my creativity and patience for solving complex architectural problems.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Art Card -->
-                <div class="glass-panel rounded-2xl p-1 creative-card transition-all duration-500">
-                    <div class="bg-slate-900/80 rounded-xl p-8 h-full flex flex-col">
-                        <div class="flex items-center justify-between mb-6">
-                            <h4 class="text-2xl font-bold text-white">Visual Art</h4>
-                            <i class="fas fa-palette text-3xl text-pink-500"></i>
-                        </div>
-                        <div class="mb-6 h-32 w-full bg-gradient-to-r from-slate-800 to-slate-700 rounded-lg overflow-hidden relative">
-                            <!-- CSS Art Abstract -->
-                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 border-4 border-pink-500/50 rounded-full"></div>
-                            <div class="absolute top-1/2 left-1/2 -translate-x-1/3 -translate-y-1/3 w-16 h-16 border-4 border-cyan-500/50 rounded-full"></div>
-                        </div>
-                        <p class="text-slate-400 mb-4 flex-grow">
-                            Exploring creativity through digital and traditional mediums. This artistic discipline sharpens my eye for <strong>UI/UX detail</strong>, helping me lead frontend teams to create interfaces that are not just functional, but beautiful.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Music Card -->
-                <div class="glass-panel rounded-2xl p-1 creative-card transition-all duration-500">
-                    <div class="bg-slate-900/80 rounded-xl p-8 h-full flex flex-col">
-                        <div class="flex items-center justify-between mb-6">
-                            <h4 class="text-2xl font-bold text-white">Music Production</h4>
-                            <i class="fas fa-music text-3xl text-purple-500"></i>
-                        </div>
-                        <div class="mb-6 h-32 w-full bg-slate-800 rounded-lg flex items-center justify-center overflow-hidden gap-1">
-                            <!-- Audio Wave Animation -->
-                            <div class="w-2 h-12 bg-purple-500 rounded-full animate-[pulse_1s_ease-in-out_infinite]"></div>
-                            <div class="w-2 h-16 bg-purple-400 rounded-full animate-[pulse_1.2s_ease-in-out_infinite]"></div>
-                            <div class="w-2 h-8 bg-purple-500 rounded-full animate-[pulse_0.8s_ease-in-out_infinite]"></div>
-                            <div class="w-2 h-20 bg-pink-500 rounded-full animate-[pulse_1.5s_ease-in-out_infinite]"></div>
-                            <div class="w-2 h-10 bg-purple-400 rounded-full animate-[pulse_1.1s_ease-in-out_infinite]"></div>
-                        </div>
-                        <p class="text-slate-400 mb-4 flex-grow">
-                            Just like coding, music is about patterns, rhythm, and structure. Creating music in my free time keeps my mind sharp for solving complex <strong>algorithmic problems</strong> and managing system flow.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Travel Card -->
-                <div class="glass-panel rounded-2xl p-1 creative-card transition-all duration-500">
-                    <div class="bg-slate-900/80 rounded-xl p-8 h-full flex flex-col">
-                        <div class="flex items-center justify-between mb-6">
-                            <h4 class="text-2xl font-bold text-white">Global Travel</h4>
-                            <i class="fas fa-globe-americas text-3xl text-blue-400"></i>
-                        </div>
-                        <div class="mb-6 h-32 w-full bg-slate-800 rounded-lg flex items-center justify-center overflow-hidden relative">
-                             <!-- Simple Map Animation -->
-                             <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#38bdf8 1px, transparent 1px); background-size: 20px 20px;"></div>
-                             <i class="fas fa-plane text-4xl text-white animate-[bounce_3s_infinite]"></i>
-                        </div>
-                        <p class="text-slate-400 mb-4 flex-grow">
-                            Travel exposes me to diverse cultures and new ways of thinking. It enhances my <strong>adaptability</strong>—a crucial skill when navigating the ever-changing landscape of modern technology and enterprise requirements.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Gardening Card -->
-                <div class="glass-panel rounded-2xl p-1 creative-card transition-all duration-500">
-                    <div class="bg-slate-900/80 rounded-xl p-8 h-full flex flex-col">
-                        <div class="flex items-center justify-between mb-6">
-                            <h4 class="text-2xl font-bold text-white">Gardening</h4>
-                            <i class="fas fa-seedling text-3xl text-green-400"></i>
-                        </div>
-                        <div class="mb-6 h-32 w-full bg-slate-800 rounded-lg flex items-center justify-center overflow-hidden">
-                             <div class="relative flex items-end justify-center h-20 w-20">
-                                <div class="w-2 h-10 bg-green-700 mx-auto"></div>
-                                <div class="absolute bottom-6 left-2 w-6 h-6 bg-green-500 rounded-full rounded-tr-none transform -rotate-45"></div>
-                                <div class="absolute bottom-8 right-2 w-5 h-5 bg-green-400 rounded-full rounded-tl-none transform rotate-45"></div>
-                             </div>
-                        </div>
-                        <p class="text-slate-400 mb-4 flex-grow">
-                            Gardening teaches patience and the importance of nurturing systems. It reflects my approach to <strong>legacy modernization</strong>: pruning what's unnecessary and fostering an environment where new growth can thrive.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA / Footer -->
-    <section id="contact" class="py-20 bg-gradient-to-b from-slate-900 to-slate-950 border-t border-slate-800">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold text-white mb-4">Let's Build Something Extraordinary</h2>
-            <p class="text-slate-400 mb-8">
-                Whether it's architectural strategy, AI implementation, or a discussion on digital art.
-            </p>
+    <!-- MAIN: wrap primary content for landmarks -->
+    <main id="main" role="main">
+        <!-- Hero Section -->
+        <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 hero-bg overflow-hidden">
+            <!-- Background Grid -->
+            <div class="absolute inset-0" style="background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px); background-size: 50px 50px;"></div>
             
-            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <a href="mailto:email@example.com" class="inline-flex items-center justify-center px-8 py-3 text-base font-bold rounded-full bg-cyan-600 text-white hover:bg-cyan-500 transition-all shadow-lg shadow-cyan-500/25">
-                    <i class="far fa-envelope mr-2"></i> Contact Me
-                </a>
-                <a href="#" class="inline-flex items-center justify-center px-8 py-3 text-base font-bold rounded-full bg-slate-800 text-white border border-slate-700 hover:bg-slate-700 transition-all">
-                    <i class="fab fa-linkedin mr-2"></i> LinkedIn
-                </a>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+                    <div class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
+                        <div class="inline-flex items-center px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 text-xs font-semibold uppercase tracking-wide mb-4">
+                            <span class="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
+                            MDM Expert & AI Engineer
+                        </div>
+                        <h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl lg:text-6xl">
+                            <!-- 2. ADD YOUR INTRO LINE HERE -->
+                            <span class="block text-lg md:text-xl font-medium text-cyan-400 mb-2">Hi, I'm Palash Bhowmick</span>
+                            <span class="block">Data Architect.</span>
+                            <span class="block gradient-text">Creative Soul.</span>
+                        </h1>
+                        <p class="mt-3 text-base text-slate-400 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                            I bridge the gap between massive enterprise data lineage and modern AI architecture. Bringing artistic intuition to frontend leadership and mathematical precision to backend logic.
+                        </p>
+                        <div class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0 flex gap-4">
+                            <a href="#projects" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-cyan-600 hover:bg-cyan-700 transition-all shadow-lg shadow-cyan-500/20">
+                                View Portfolio
+                            </a>
+                            <a href="#creative" class="inline-flex items-center justify-center px-6 py-3 border border-slate-700 bg-slate-800/50 text-base font-medium rounded-md text-slate-300 hover:bg-slate-800 transition-all">
+                                My Hobbies
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center justify-center">
+                       <div class="relative w-full rounded-lg lg:max-w-md group">
+                            <!-- Decorative Elements -->
+                            <div class="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                            
+                            <!-- Terminal Window -->
+                            <div class="relative bg-[#0B1120] rounded-xl p-1 border border-slate-700 shadow-2xl">
+                                <div class="bg-slate-800/50 px-4 py-2 rounded-t-lg flex items-center gap-2 border-b border-slate-700">
+                                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                    <!-- 3. UPDATE THE TERMINAL PROMPT HERE -->
+                                    <div class="ml-2 text-xs text-slate-400 font-mono">palash@mainframe:~</div>
+                                </div>
+                                <div class="p-6 font-mono text-sm text-slate-300 leading-relaxed">
+                                    <span class="text-purple-400">import</span> mcp_server <span class="text-purple-400">as</span> ai<br>
+                                    <span class="text-purple-400">from</span> creative <span class="text-purple-400">import</span> Art, Music<br><br>
+                                    <span class="text-slate-500"># Initialize Professional Stack</span><br>
+                                    class <span class="text-yellow-300">Profile</span>:<br>
+                                    &nbsp;&nbsp;experience = <span class="text-green-400">"Decades"</span><br>
+                                    &nbsp;&nbsp;specialty = [<span class="text-green-400">"MDM"</span>, <span class="text-green-400">"Lineage"</span>, <span class="text-green-400">"VueJS"</span>]<br><br>
+                                    &nbsp;&nbsp;<span class="text-blue-400">def</span> <span class="text-yellow-300">innovate</span>(self):<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;return ai.scale(dataset=<span class="text-cyan-400">"Huge"</span>)<br><br>
+                                    <span class="text-slate-500"># Running...</span><br>
+                                    > Deploying AI Agents... <span class="text-green-400">OK</span><br>
+                                    > Tuning Synthesizers... <span class="text-green-400">OK</span><br>
+                                    <span class="cursor">&nbsp;</span>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="border-t border-slate-800 pt-8 text-slate-600 text-sm">
-                <p>© 2025. Crafted with <i class="fas fa-heart text-pink-500 mx-1"></i> for Code, Art, and Music.</p>
+        <!-- Experience / MDM Domain Section -->
+        <section id="experience" class="py-20 bg-slate-900 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-16">
+                    <h2 class="text-base text-cyan-400 font-semibold tracking-wide uppercase">Core Expertise</h2>
+                    <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
+                        Mastering Enterprise Data
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 gap-8 sm:grid-cols-3">
+                    <!-- Card 1 -->
+                    <div class="glass-panel p-8 rounded-xl tech-card transition-all duration-300 group">
+                        <div class="w-14 h-14 bg-slate-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-cyan-900/30 transition-colors">
+                            <i class="fas fa-sitemap text-cyan-400 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Data Lineage</h3>
+                        <p class="text-slate-400 leading-relaxed">Architecting end-to-end visibility. I build systems that trace data from source to consumption, ensuring compliance and trust in massive enterprise ecosystems.</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="glass-panel p-8 rounded-xl tech-card transition-all duration-300 group">
+                        <div class="w-14 h-14 bg-slate-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-purple-900/30 transition-colors">
+                            <i class="fas fa-shopping-bag text-purple-400 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Data Marketplace</h3>
+                        <p class="text-slate-400 leading-relaxed">Democratizing data. I transform raw tables into governed, shoppable assets, enabling business users to leverage data without technical barriers.</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="glass-panel p-8 rounded-xl tech-card transition-all duration-300 group">
+                        <div class="w-14 h-14 bg-slate-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-pink-900/30 transition-colors">
+                            <i class="fas fa-fingerprint text-pink-400 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Deduplication</h3>
+                        <p class="text-slate-400 leading-relaxed">The hunt for the "Golden Record." Implementing complex entity resolution algorithms to clean and unify millions of records with precision.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section id="tech" class="py-20 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-start">
+                    <div class="mb-10 lg:mb-0">
+                        <h2 class="text-3xl font-extrabold text-white sm:text-4xl mb-6">
+                            Technology Stack
+                        </h2>
+                        <p class="text-lg text-slate-300 mb-8">
+                            I don't just manage data; I build the systems that power it. My career is defined by a hunger for new tech—migrating legacy frontends to Vue.js and deploying next-gen AI servers.
+                        </p>
+                        
+                        <div class="space-y-8">
+                            <!-- Frontend -->
+                            <div class="relative pl-6 border-l-2 border-cyan-500/30">
+                                <h4 class="text-sm font-bold text-cyan-400 uppercase tracking-wider mb-2">Frontend Leadership</h4>
+                                <p class="text-slate-400 text-sm mb-3">Led the UI revamp of MDM products.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 text-xs rounded bg-slate-800 border border-slate-700 text-white font-mono">Vue.js</span>
+                                    <span class="px-3 py-1 text-xs rounded bg-slate-800 border border-slate-700 text-white font-mono">JavaScript ES6+</span>
+                                    <span class="px-3 py-1 text-xs rounded bg-slate-800 border border-slate-700 text-white font-mono">Tailwind</span>
+                                </div>
+                            </div>
+
+                            <!-- AI -->
+                            <div class="relative pl-6 border-l-2 border-purple-500/30">
+                                <h4 class="text-sm font-bold text-purple-400 uppercase tracking-wider mb-2">AI & Backend</h4>
+                                <p class="text-slate-400 text-sm mb-3">Pushing boundaries with Large Scale AI.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 text-xs rounded bg-slate-800 border border-slate-700 text-white font-mono">Python</span>
+                                    <span class="px-3 py-1 text-xs rounded bg-slate-800 border border-slate-700 text-white font-mono">MCP Servers</span>
+                                    <span class="px-3 py-1 text-xs rounded bg-slate-800 border border-slate-700 text-white font-mono">Machine Learning</span>
+                                </div>
+                            </div>
+
+                            <!-- DevOps -->
+                            <div class="relative pl-6 border-l-2 border-green-500/30">
+                                <h4 class="text-sm font-bold text-green-400 uppercase tracking-wider mb-2">DevOps & CI/CD</h4>
+                                <p class="text-slate-400 text-sm mb-3">Ensuring robust, automated delivery.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 text-xs rounded bg-slate-800 border border-slate-700 text-white font-mono">Docker</span>
+                                    <span class="px-3 py-1 text-xs rounded bg-slate-800 border border-slate-700 text-white font-mono">Jenkins</span>
+                                    <span class="px-3 py-1 text-xs rounded bg-slate-800 border border-slate-700 text-white font-mono">Cloud Native</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div
+                    
+                    <!-- Interactive looking abstract tech element -->
+                    <div class="relative lg:h-full flex items-center justify-center">
+                         <div class="w-full aspect-square max-w-sm bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl border border-slate-700 p-6 relative overflow-hidden">
+                            <!-- Abstract UI representation -->
+                            <div class="flex justify-between items-center mb-6 border-b border-slate-700 pb-4">
+                                <div class="h-3 w-24 bg-slate-600 rounded"></div>
+                                <div class="flex gap-2">
+                                    <div class="h-3 w-3 bg-cyan-500 rounded-full"></div>
+                                    <div class="h-3 w-3 bg-purple-500 rounded-full"></div>
+                                </div>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="h-20 bg-slate-700/50 rounded-lg w-full animate-pulse"></div>
+                                <div class="h-8 bg-slate-700/30 rounded-lg w-3/4"></div>
+                                <div class="h-8 bg-slate-700/30 rounded-lg w-1/2"></div>
+                            </div>
+                            
+                            <!-- Floating code badges -->
+                            <div class="absolute bottom-6 right-6 text-right">
+                                <div class="text-xs text-slate-500 mb-1">System Status</div>
+                                <div class="text-xl font-bold text-green-400">Operational</div>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section id="projects" class="py-20 bg-slate-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-end justify-between mb-12">
+                    <div>
+                        <h2 class="text-3xl font-extrabold text-white">Featured Initiatives</h2>
+                        <p class="mt-2 text-slate-400">Where experience meets execution.</p>
+                    </div>
+                </div>
+
+                <div class="grid gap-8 md:grid-cols-2">
+                    <!-- Project 1 -->
+                    <div class="relative group overflow-hidden rounded-xl border border-slate-700 bg-slate-800 hover:border-green-500/50 transition-colors">
+                        <div class="p-8">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-xl font-bold text-white group-hover:text-green-400 transition-colors">Frontend Revamp & Leadership</h3>
+                                <span class="bg-green-500/10 text-green-400 text-xs font-mono px-2 py-1 rounded">VUE.JS</span>
+                            </div>
+                            <p class="text-slate-400 mb-6 text-sm">
+                                Led a dedicated UI team to modernize an enterprise MDM interface. Migrated legacy frameworks to a modular Vue.js architecture, establishing a new design system that improved user efficiency by 40%.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="relative group overflow-hidden rounded-xl border border-slate-700 bg-slate-800 hover:border-purple-500/50 transition-colors">
+                        <div class="p-8">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">Enterprise AI & MCP Integration</h3>
+                                <span class="bg-purple-500/10 text-purple-400 text-xs font-mono px-2 py-1 rounded">PYTHON / AI</span>
+                            </div>
+                            <p class="text-slate-400 mb-6 text-sm">
+                                Implementing MCP (Model Context Protocol) servers to securely bridge LLMs with internal enterprise data. Built Python pipelines to handle large-scale datasets for RAG (Retrieval-Augmented Generation).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Creative Pursuits Section (NEW) -->
+        <section id="creative" class="py-24 relative overflow-hidden bg-[#0B1120]">
+            <!-- Background Blobs (use inline animation-delay styles instead of non-standard utility classes) -->
+            <div class="blob-bg bg-purple-600 w-96 h-96 rounded-full top-0 left-0 -translate-x-1/2 -translate-y-1/2 mix-blend-screen animate-blob" style="animation-delay: 0s;"></div>
+            <div class="blob-bg bg-pink-600 w-96 h-96 rounded-full bottom-0 right-0 translate-x-1/2 translate-y-1/2 mix-blend-screen animate-blob" style="animation-delay: 2s;"></div>
+            <div class="blob-bg bg-green-600 w-80 h-80 rounded-full bottom-0 left-0 -translate-x-1/2 translate-y-1/2 mix-blend-screen animate-blob" style="animation-delay: 4s;"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-16">
+                    <h2 class="text-sm font-bold text-pink-400 uppercase tracking-wider">Beyond the Code</h2>
+                    <h3 class="mt-2 text-3xl font-extrabold text-white sm:text-4xl">
+                        <span class="gradient-text-creative">Life & Inspiration</span>
+                    </h3>
+                    <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-400">
+                        I believe that building great software requires a balanced mind. My hobbies—from art to gardening—fuel my creativity and patience for solving complex architectural problems.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Art Card -->
+                    <div class="glass-panel rounded-2xl p-1 creative-card transition-all duration-500">
+                        <div class="bg-slate-900/80 rounded-xl p-8 h-full flex flex-col">
+                            <div class="flex items-center justify-between mb-6">
+                                <h4 class="text-2xl font-bold text-white">Visual Art</h4>
+                                <i class="fas fa-palette text-3xl text-pink-500"></i>
+                            </div>
+                            <div class="mb-6 h-32 w-full bg-gradient-to-r from-slate-800 to-slate-700 rounded-lg overflow-hidden relative">
+                                <!-- CSS Art Abstract -->
+                                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 border-4 border-pink-500/50 rounded-full"></div>
+                                <div class="absolute top-1/2 left-1/2 -translate-x-1/3 -translate-y-1/3 w-16 h-16 border-4 border-cyan-500/50 rounded-full"></div>
+                            </div>
+                            <p class="text-slate-400 mb-4 flex-grow">
+                                Exploring creativity through digital and traditional mediums. This artistic discipline sharpens my eye for <strong>UI/UX detail</strong>, helping me lead frontend teams to create interfaces that are not just functional, but beautiful.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Music Card -->
+                    <div class="glass-panel rounded-2xl p-1 creative-card transition-all duration-500">
+                        <div class="bg-slate-900/80 rounded-xl p-8 h-full flex flex-col">
+                            <div class="flex items-center justify-between mb-6">
+                                <h4 class="text-2xl font-bold text-white">Music Production</h4>
+                                <i class="fas fa-music text-3xl text-purple-500"></i>
+                            </div>
+                            <div class="mb-6 h-32 w-full bg-slate-800 rounded-lg flex items-center justify-center overflow-hidden gap-1">
+                                <!-- Audio Wave Animation -->
+                                <div class="w-2 h-12 bg-purple-500 rounded-full animate-[pulse_1s_ease-in-out_infinite]"></div>
+                                <div class="w-2 h-16 bg-purple-400 rounded-full animate-[pulse_1.2s_ease-in-out_infinite]"></div>
+                                <div class="w-2 h-8 bg-purple-500 rounded-full animate-[pulse_0.8s_ease-in-out_infinite]"></div>
+                                <div class="w-2 h-20 bg-pink-500 rounded-full animate-[pulse_1.5s_ease-in-out_infinite]"></div>
+                                <div class="w-2 h-10 bg-purple-400 rounded-full animate-[pulse_1.1s_ease-in-out_infinite]"></div>
+                            </div>
+                            <p class="text-slate-400 mb-4 flex-grow">
+                                Just like coding, music is about patterns, rhythm, and structure. Creating music in my free time keeps my mind sharp for solving complex <strong>algorithmic problems</strong> and managing system flow.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Travel Card -->
+                    <div class="glass-panel rounded-2xl p-1 creative-card transition-all duration-500">
+                        <div class="bg-slate-900/80 rounded-xl p-8 h-full flex flex-col">
+                            <div class="flex items-center justify-between mb-6">
+                                <h4 class="text-2xl font-bold text-white">Global Travel</h4>
+                                <i class="fas fa-globe-americas text-3xl text-blue-400"></i>
+                            </div>
+                            <div class="mb-6 h-32 w-full bg-slate-800 rounded-lg flex items-center justify-center overflow-hidden relative">
+                                 <!-- Simple Map Animation -->
+                                 <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#38bdf8 1px, transparent 1px); background-size: 20px 20px;"></div>
+                                 <i class="fas fa-plane text-4xl text-white animate-[bounce_3s_infinite]"></i>
+                            </div>
+                            <p class="text-slate-400 mb-4 flex-grow">
+                                Travel exposes me to diverse cultures and new ways of thinking. It enhances my <strong>adaptability</strong>—a crucial skill when navigating the ever-changing landscape of modern technology and enterprise requirements.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Gardening Card -->
+                    <div class="glass-panel rounded-2xl p-1 creative-card transition-all duration-500">
+                        <div class="bg-slate-900/80 rounded-xl p-8 h-full flex flex-col">
+                            <div class="flex items-center justify-between mb-6">
+                                <h4 class="text-2xl font-bold text-white">Gardening</h4>
+                                <i class="fas fa-seedling text-3xl text-green-400"></i>
+                            </div>
+                            <div class="mb-6 h-32 w-full bg-slate-800 rounded-lg flex items-center justify-center overflow-hidden">
+                                 <div class="relative flex items-end justify-center h-20 w-20">
+                                    <div class="w-2 h-10 bg-green-700 mx-auto"></div>
+                                    <div class="absolute bottom-6 left-2 w-6 h-6 bg-green-500 rounded-full rounded-tr-none transform -rotate-45"></div>
+                                    <div class="absolute bottom-8 right-2 w-5 h-5 bg-green-400 rounded-full rounded-tl-none transform rotate-45"></div>
+                                 </div>
+                            </div>
+                            <p class="text-slate-400 mb-4 flex-grow">
+                                Gardening teaches patience and the importance of nurturing systems. It reflects my approach to <strong>legacy modernization</strong>: pruning what's unnecessary and fostering an environment where new growth can thrive.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA / Footer -->
+        <section id="contact" class="py-20 bg-gradient-to-b from-slate-900 to-slate-950 border-t border-slate-800">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold text-white mb-4">Let's Build Something Extraordinary</h2>
+                <p class="text-slate-400 mb-8">
+                    Whether it's architectural strategy, AI implementation, or a discussion on digital art.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+
+                    <!-- Contact Form button (opens Google Form) -->
+                    <a href="https://forms.gle/9AvrgQ4bAfneWcGb7" target="_blank" rel="noopener noreferrer" aria-label="Open contact form" class="inline-flex items-center justify-center px-8 py-3 text-base font-bold rounded-full bg-cyan-600 text-white hover:bg-emerald-500 transition-all shadow-lg shadow-emerald-500/25">
+                        <i class="fas fa-edit mr-2" aria-hidden="true"></i> Contact Me
+                    </a>
+
+                    <!-- GitHub button -->
+                    <a href="https://github.com/palashbhowmick" target="_blank" rel="noopener noreferrer" aria-label="Open Palash Bhowmick on GitHub" class="inline-flex items-center justify-center px-8 py-3 text-base font-bold rounded-full bg-slate-700 text-white border border-slate-700 hover:bg-slate-600 transition-all">
+                        <i class="fab fa-github mr-2" aria-hidden="true"></i> GitHub
+                    </a>
+
+                    <!-- LinkedIn button -->
+                    <a href="https://www.linkedin.com/in/palashbhowmick/" target="_blank" rel="noopener noreferrer" aria-label="Open Palash Bhowmick on LinkedIn" class="inline-flex items-center justify-center px-8 py-3 text-base font-bold rounded-full bg-slate-800 text-white border border-slate-700 hover:bg-slate-700 transition-all">
+                        <i class="fab fa-linkedin mr-2" aria-hidden="true"></i> LinkedIn
+                    </a>
+                </div>
+
+                <div class="border-t border-slate-800 pt-8 text-slate-600 text-sm">
+                    <p>© 2025. Crafted with <i class="fas fa-heart text-pink-500 mx-1" aria-hidden="true"></i> for Code, Art, and Music.</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
 </body>
 </html>
